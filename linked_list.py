@@ -18,7 +18,7 @@ class LinkedList:
         while current_node:
             if current_node.get_value() != None:
                 string_list += str(current_node.get_value()) + "\n"
-        current_node = current_node.get_next_node()
+            current_node = current_node.get_next_node()
         return string_list
   
     def remove_node(self, value_to_remove):
