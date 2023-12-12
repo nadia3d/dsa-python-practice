@@ -34,29 +34,3 @@ class LinkedList:
                 else:
                     current_node = next_node
 
-
-def find_middle(linked_list):
-  slow = linked_list.head_node
-  fast = linked_list.head_node
-  while fast is not None and fast.get_next_node() is not None:
-    print("old slow "+ str(slow.value))
-    slow = slow.get_next_node()
-    print("new slow "+str(slow.value))
-    print("old fast "+ str(fast.value))
-    fast = fast.get_next_node().get_next_node()
-    print("new fast "+ str(fast.value))
-    print("new fast next" + str(fast.get_next_node().value))
-
-  return slow
-
-
-def generate_test_linked_list(length):
-  linked_list = LinkedList()
-  for i in range(length, 0, -1):
-    linked_list.insert_beginning(i)
-  return linked_list
-
-test_list = generate_test_linked_list(9)
-print(test_list.stringify_list())
-middle_node = find_middle(test_list)
-print(middle_node.value)
