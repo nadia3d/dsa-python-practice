@@ -1,8 +1,11 @@
 from node import Node
 
 class LinkedList:
-    def __init__(self,value=None):
-        self.head_node = Node(value)
+    def __init__(self, value=None):
+        if value is not None:
+            self.head_node = Node(value)
+        else:
+            self.head_node = None
     
     def get_head_node(self):
         return self.head_node
